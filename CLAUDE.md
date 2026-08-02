@@ -28,3 +28,9 @@ Examples:
 - fix:
 - docs:
 - chore:
+## AI Assistance
+
+Use AI to:
+- Explain code.
+- Generate documentation.
+- Suggest improvements.
