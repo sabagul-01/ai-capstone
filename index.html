@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings | AI Capstone</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="settings-card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Project Settings</p>
+            <h1>Account preferences</h1>
+            <p class="subtitle">Update your name, email, and preferred theme.</p>
+          </div>
+          <div class="theme-preview" aria-hidden="true"></div>
+        </div>
+
+        <form id="settingsForm" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+            <span class="error-message" id="nameError"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="jane@example.com" required />
+            <span class="error-message" id="emailError"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="theme">Theme preference</label>
+            <select id="theme" name="theme" required>
+              <option value="">Select a theme</option>
+              <option value="light">Light mode</option>
+              <option value="dark">Dark mode</option>
+              <option value="system">System default</option>
+            </select>
+            <span class="error-message" id="themeError"></span>
+          </div>
+
+          <div class="actions-row">
+            <button type="submit" class="primary-btn">Save settings</button>
+            <p class="status-message" id="statusMessage" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
