@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings | AI Capstone</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <section class="card" aria-labelledby="settingsTitle">
+      <div class="card-header">
+        <div>
+          <p class="eyebrow">Settings</p>
+          <h1 id="settingsTitle">Account preferences</h1>
+          <p class="subtitle">Update your name, email, and preferred theme.</p>
+        </div>
+      </div>
+
+      <form id="settingsForm" novalidate>
+        <div class="field-group">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" aria-describedby="nameError" autocomplete="name" />
+          <span id="nameError" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" aria-describedby="emailError" autocomplete="email" />
+          <span id="emailError" class="field-error" role="alert"></span>
+        </div>
+
+        <fieldset class="field-group theme-group">
+          <legend>Theme preference</legend>
+          <div class="radio-row" role="group" aria-describedby="themeError">
+            <label class="radio-option">
+              <input id="theme-light" name="theme" type="radio" value="light" />
+              <span>Light mode</span>
+            </label>
+            <label class="radio-option">
+              <input id="theme-dark" name="theme" type="radio" value="dark" />
+              <span>Dark mode</span>
+            </label>
+          </div>
+          <span id="themeError" class="field-error" role="alert"></span>
+        </fieldset>
+
+        <button type="submit" class="primary-btn">Save settings</button>
+      </form>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
